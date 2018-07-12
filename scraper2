@@ -1,0 +1,14 @@
+from bs4 import BeautifulSoup
+import requests
+
+page = requests.get('http://www.klbjfm.com/broadcasthistory')
+
+soup = BeautifulSoup(page.text, 'html.parser')
+
+tmp = soup.select("#pane-region-jumper > div")
+
+print(soup)
+
+
+# <li class="next"><a href="/broadcasthistory?page=1"></a></li>
+# pane-region-jumper > div > div > div > div.text-center > ul > li.next
