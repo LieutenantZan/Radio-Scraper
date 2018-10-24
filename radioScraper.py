@@ -127,7 +127,7 @@ def main():
     # checkDuplicates()
     # print(len(songTitle))
 
-    writeToCSV(date.today().strftime('%m%d%Y')+".csv")
+    writeToCSV("data/"+date.today().strftime('%m%d%Y')+".csv")
 
     return
 
